@@ -1,4 +1,5 @@
 import 'package:awesome_places_app/Widget/home_page_widgets/categories_card.dart';
+import 'package:awesome_places_app/pages/natural_wonders_page.dart';
 import 'package:awesome_places_app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -76,16 +77,26 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CategoriesCard(
-                      cardTitle: "Natural Wonders",
-                      cardWidth: 190,
-                      cardheight: 130,
-                      cardColor: cardColor1,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NaturalWondersPage(),
+                          ),
+                        );
+                      },
+                      child: const CategoriesCard(
+                        cardTitle: "Natural Wonders",
+                        cardWidth: 190,
+                        cardheight: 130,
+                        cardColor: cardColor1,
+                      ),
                     ),
-                    CategoriesCard(
+                    const CategoriesCard(
                       cardTitle: "Nightlife",
                       cardWidth: 190,
                       cardheight: 130,
