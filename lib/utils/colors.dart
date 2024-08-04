@@ -21,3 +21,6 @@ const Color title1Cultural = Color(0xffC00C00);
 
 const Color button1Color = Color(0xff06FFA5);
 const Color button2Color = Color(0xffFF1E0F);
+
+final Color starCardColor = const Color(0xffCACACA).withOpacity(0.31);
+final Color starCardColor2 = const Color(0xff3B3636).withOpacity(0.75);
