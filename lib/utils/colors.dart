@@ -24,3 +24,5 @@ const Color button2Color = Color(0xffFF1E0F);
 
 final Color starCardColor = const Color(0xffCACACA).withOpacity(0.31);
 final Color starCardColor2 = const Color(0xff3B3636).withOpacity(0.75);
+
+const Color othreText = Color(0xff8E8FFA);

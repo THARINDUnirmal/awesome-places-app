@@ -1,4 +1,5 @@
 import 'package:awesome_places_app/Widget/home_page_widgets/categories_card.dart';
+import 'package:awesome_places_app/pages/booking_page/book_tour_page.dart';
 import 'package:awesome_places_app/pages/cultural_page.dart';
 import 'package:awesome_places_app/pages/landmark_page.dart';
 import 'package:awesome_places_app/pages/natural_wonders_page.dart';
@@ -161,12 +162,22 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const Center(
-                  child: CategoriesCard(
-                    cardTitle: "Book For A Ride Today!",
-                    cardWidth: 390,
-                    cardheight: 130,
-                    cardColor: cardColor3,
+                Center(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BookTourPage(),
+                        ),
+                      );
+                    },
+                    child: const CategoriesCard(
+                      cardTitle: "Book For A Ride Today!",
+                      cardWidth: 390,
+                      cardheight: 130,
+                      cardColor: cardColor3,
+                    ),
                   ),
                 ),
               ],

@@ -1,3 +1,4 @@
+import 'package:awesome_places_app/shared/button.dart';
 import 'package:awesome_places_app/shared/star_card.dart';
 import 'package:awesome_places_app/utils/colors.dart';
 import 'package:flutter/material.dart';
@@ -89,13 +90,26 @@ class CulturalPage extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              Container(
-                width: double.infinity,
-                height: 70,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: "Enter Text...",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  contentPadding: const EdgeInsets.all(10),
                 ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  PageButton(
+                    buttonText: "Submit",
+                    buttonColor: cardColor3,
+                  ),
+                ],
               )
             ],
           ),
