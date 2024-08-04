@@ -2,19 +2,19 @@ import 'package:awesome_places_app/Widget/reuseble/image_card.dart';
 import 'package:awesome_places_app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
-class NaturalWondersPage extends StatelessWidget {
-  const NaturalWondersPage({super.key});
+class NightLifePage extends StatelessWidget {
+  const NightLifePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Natural Wonders",
+          "Nightlife",
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.w700,
-            color: title1Natural,
+            color: title1Nightlife,
           ),
         ),
       ),
@@ -34,28 +34,20 @@ class NaturalWondersPage extends StatelessWidget {
                 height: 20,
               ),
               ImageCard(
-                roundCard: false,
-                titleColor: title2Natural,
-                cardTitle: "Nature Wonders Place-1",
+                cardTitle: "Nightlife Place-1",
+                titleColor: title2Nightlife,
                 cardDescription:
                     "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
-                imageUrl: "assets/nature2.png",
+                imageUrl: "assets/night2.png",
+                roundCard: true,
               ),
               ImageCard(
-                roundCard: false,
-                titleColor: title2Natural,
-                cardTitle: "Nature Wonders Place-2",
+                cardTitle: "Nightlife Place-2",
+                titleColor: title2Nightlife,
                 cardDescription:
                     "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
-                imageUrl: "assets/nature1.png",
-              ),
-              ImageCard(
-                roundCard: false,
-                titleColor: title2Natural,
-                cardTitle: "Nature Wonders Place-3",
-                cardDescription:
-                    "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
-                imageUrl: "assets/nature3.png",
+                imageUrl: "assets/night1.png",
+                roundCard: true,
               )
             ],
           ),

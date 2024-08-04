@@ -1,5 +1,8 @@
 import 'package:awesome_places_app/Widget/home_page_widgets/categories_card.dart';
+import 'package:awesome_places_app/pages/cultural_page.dart';
+import 'package:awesome_places_app/pages/landmark_page.dart';
 import 'package:awesome_places_app/pages/natural_wonders_page.dart';
+import 'package:awesome_places_app/pages/night_life_page.dart';
 import 'package:awesome_places_app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -20,11 +23,12 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           "Awesome",
                           style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 23,
                             color: title1,
                           ),
                         ),
@@ -96,31 +100,61 @@ class HomePage extends StatelessWidget {
                         cardColor: cardColor1,
                       ),
                     ),
-                    const CategoriesCard(
-                      cardTitle: "Nightlife",
-                      cardWidth: 190,
-                      cardheight: 130,
-                      cardColor: cardColor1,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NightLifePage(),
+                          ),
+                        );
+                      },
+                      child: const CategoriesCard(
+                        cardTitle: "Nightlife",
+                        cardWidth: 190,
+                        cardheight: 130,
+                        cardColor: cardColor1,
+                      ),
                     ),
                   ],
                 ),
                 const SizedBox(
                   height: 15,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CategoriesCard(
-                      cardTitle: "Landmarks",
-                      cardWidth: 190,
-                      cardheight: 130,
-                      cardColor: cardColor2,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LandmarkPage(),
+                          ),
+                        );
+                      },
+                      child: const CategoriesCard(
+                        cardTitle: "Landmarks",
+                        cardWidth: 190,
+                        cardheight: 130,
+                        cardColor: cardColor2,
+                      ),
                     ),
-                    CategoriesCard(
-                      cardTitle: "Cultural",
-                      cardWidth: 190,
-                      cardheight: 130,
-                      cardColor: cardColor2,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const CulturalPage(),
+                          ),
+                        );
+                      },
+                      child: const CategoriesCard(
+                        cardTitle: "Cultural",
+                        cardWidth: 190,
+                        cardheight: 130,
+                        cardColor: cardColor2,
+                      ),
                     ),
                   ],
                 ),
